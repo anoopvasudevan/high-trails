@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/high-trails/precache-manifest.70882b3ae42e73340194cfab0079360c.js"
+  "/high-trails/precache-manifest.9e240aa151107bac90f44a88e8569587.js"
 );
 
 self.addEventListener('message', (event) => {
