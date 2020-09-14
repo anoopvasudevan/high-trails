@@ -19,7 +19,7 @@ import NavBar from "./shared/components/Navigation/NavBar";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/high-trails">
       <NavBar />
       <main>
         <Switch>
