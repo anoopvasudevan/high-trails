@@ -17,6 +17,7 @@
   text-transform: uppercase;
   padding: 1em;
   color: var(--clr-black);
+  font-weight: var(--fw-semi-bold);
   transition: all 200ms ease-in-out;
 }
 

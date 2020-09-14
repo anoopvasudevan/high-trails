@@ -71,8 +71,7 @@
   background-color: var(--clr-light);
   border-radius: 2rem;
   margin: 2rem auto 0;
-  width: min(600px,100%);
-
+  width: min(600px, 100%);
 }
 
 .Logo {
@@ -84,15 +83,15 @@
 }
 
 .Section__whyus {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: .5rem 2rem;
-    justify-items: center;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+  gap: 0.5rem 2rem;
+  justify-items: center;
 }
 
 .Section__whyus .Section__text {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .Section__album {
@@ -115,7 +114,7 @@
   }
 
   .Section__about_info .Section__text {
-      margin-right: 0;
+    margin-right: 0;
   }
 
   .Section__logo {

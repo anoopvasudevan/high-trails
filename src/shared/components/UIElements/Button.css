@@ -44,9 +44,8 @@
 }
 
 button:disabled {
-  opacity: 50%;
+  opacity: 0.6;
 }
-
 
 .button.button--special:hover {
   background-color: var(--clr-accent);

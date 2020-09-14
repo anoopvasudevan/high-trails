@@ -27,11 +27,11 @@ const Landing = () => {
               Read More
             </Button>
           </div> */}
-        </div>
         <div className="ReadButton">
           <Button href="#Services" size="small" gray>
             Read More
           </Button>
+        </div>
         </div>
       </Container>
     </section>
