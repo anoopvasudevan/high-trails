@@ -1,0 +1,97 @@
+.Contact {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.WrapperSection {
+  color: var(--clr-light);
+  padding: calc(var(--navbar-height) + 4rem) 0;
+  text-align: center;
+  background-color: var(--clr-body);
+}
+
+ .ReviewUs {
+    margin-top: 3rem;
+}
+
+.Section__title {
+  font-size: var(--fs-h4);
+  text-transform: capitalize;
+  font-weight: var(--fw-normal);
+  margin-bottom: 1em;
+  display: inline-block;
+  position: relative;
+}
+
+.Section__title::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  height: 2px;
+  top: calc(100% + 0.2em);
+  left: 10%;
+  background-color: var(--clr-accent);
+}
+
+.ContactUs p,
+.ReviewUs p {
+    font-weight: var(--fw-light);
+  line-height: var(--line-height-text);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--clr-dark);
+  position: relative;
+}
+
+.PhoneCard {
+    display: inline-block;
+    position: relative;
+}
+
+
+.AddressCard {
+    /* display: inline-block; */
+    position: relative;
+}
+
+.ReviewForm {
+    width: min(400px, 90%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    /* align-items: center; */
+    
+}
+
+.FormItem {
+    margin-bottom: 2rem;
+}
+.FormItem * {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.FormItem label {
+    margin-bottom: .4em;
+}
+
+.FormItem input,
+.FormItem textarea {
+    font: inherit;
+    color: var(--clr-light);
+    padding: .4em;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--clr-light);
+    background-color: rgba(196, 196, 196, 0.05);
+}
+
+.ReviewForm button {
+    align-self: center;
+}

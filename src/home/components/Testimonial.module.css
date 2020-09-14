@@ -1,0 +1,29 @@
+.Testimonial {
+    width: min(100%, 350px);
+}
+
+.TestimonialCard {
+    margin-top: 10%;
+}
+
+.Testimonial + .Testimonial {
+    margin-left: 3em;
+}
+
+
+.Quote {
+    font-size: 2rem;
+    color: var(--clr-accent);
+    margin-bottom: 1em;
+}
+
+.Testimonial__text {
+    margin-bottom: 2.5em;
+    line-height: var(--line-height-text);
+    text-align: center;
+}
+
+.Testimonial__author {
+    font-weight: var(--fw-semi-bold);
+    
+}

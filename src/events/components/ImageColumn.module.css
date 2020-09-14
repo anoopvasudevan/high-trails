@@ -1,0 +1,15 @@
+.ImageWrapper {
+    max-width: 100%;
+}
+
+.Image + .Image {
+    margin-top: 2rem;
+    
+}
+
+.Image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}

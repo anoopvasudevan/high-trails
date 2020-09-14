@@ -1,0 +1,15 @@
+.Carousal {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  /* gap: 5%; gap foesn't work in safari */
+  
+}
+
+.Pagination {
+  margin-top: 3em;
+}
+
+.Pagination button {
+  font-size: 1.4rem;
+}

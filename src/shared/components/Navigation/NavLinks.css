@@ -1,0 +1,42 @@
+.NavLinks {
+  /* Need to bring it down a little? */
+  margin: 0;
+  /* margin-top: var(--navbar-height); */
+  margin-top: 10vh;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.NavLink + .NavLink {
+  margin-top: 2.5em;
+}
+
+.NavLink a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em;
+  color: var(--clr-black);
+  transition: all 200ms ease-in-out;
+}
+
+.NavLink a:hover,
+.NavLink a.active {
+  color: var(--clr-accent);
+}
+
+@media (min-width: 900px) {
+  .NavLinks {
+    display: flex;
+    margin: 0;
+  }
+
+  .NavLink + .NavLink {
+    margin-top: 0;
+  }
+
+  .NavLink a {
+    font-size: 0.95rem;
+    color: var(--clr-light);
+  }
+}

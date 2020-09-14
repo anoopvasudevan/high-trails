@@ -1,0 +1,21 @@
+.Card {
+  margin: 0;
+}
+
+.Image {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.CardTitle {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-semi-bold);
+  margin-top: 1.5em;
+}
+
+.CardDesc {
+  line-height: var(--line-height-text);
+  color: var(--clr-dark);
+}

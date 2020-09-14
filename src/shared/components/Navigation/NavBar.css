@@ -1,0 +1,43 @@
+.Header {
+  position: fixed;
+  width: 100%;
+  z-index: 400;
+  padding-top: 1em;
+  transition: all 200ms ease-in-out;
+}
+
+.Header.Scrolled {
+  padding-top: 0;
+  background-color: var(--clr-black);
+}
+
+.NavBar {
+  position: relative;
+  z-index: 250;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavBar__logo-img {
+  height: 70px;
+  transition: all 200ms ease-in-out;
+}
+
+.Header.Scrolled .NavBar__logo-img {
+  transform: scale(.9, .9);
+}
+
+.NavBar__main-nav {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .NavBar__menu-btn {
+    display: none;
+  }
+
+  .NavBar__main-nav {
+    display: block;
+  }
+}

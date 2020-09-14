@@ -1,0 +1,73 @@
+.Footer {
+    background: var(--clr-black);
+    position: fixed;
+    /* width: 100vw; */
+    width: 100%;
+    height: 560px;
+    bottom: 0;
+    z-index: 100;
+    color: var(--clr-light);
+    text-align: center;
+    /* margin-top: -100% */
+}
+
+.Title {
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-light);
+    margin-bottom: 1em;
+}
+
+.Logo {
+    width: 7rem;
+}
+
+.Contact {
+    margin-top: 4rem;
+}
+
+.Contact, .Follow, .Logo {
+    margin-bottom: 3rem
+}
+
+.Item {
+    color: var(--clr-dark);
+}
+
+.Item span {
+    margin-left: 1em;
+}
+
+@media (min-width: 800px) {
+    .Footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .FooterInfo {
+        height: 400px;
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+
+    .Contact {
+        order: 1;
+        margin: 0;
+    }
+
+    .Logo {
+        width: 20%;
+        order: 2;
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .Follow {
+        order: 3;
+        margin: 0;
+    }
+
+    
+}
