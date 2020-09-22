@@ -1,0 +1,11 @@
+.ActiveFilters {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.ActiveFilters__title {
+    text-align: left;
+    margin: 0 0 .5rem;
+}

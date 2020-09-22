@@ -1,0 +1,52 @@
+.Container {
+  width: 100%;
+}
+
+.TitleContainer {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.Button {
+  outline: none;
+}
+
+.Icon {
+  transition: all 200ms ease-in-out;
+}
+
+.IconRotate {
+  transform: rotate(180deg);
+}
+
+
+
+/* .Option input[type="checkbox"] { */
+  /* border: none; */
+  /* margin: 0; */
+/* } */
+
+.OptionsFormEnter {
+  opacity: 0;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+.OptionsFormEnterActive {
+  transform: scale(1, 1);
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.OptionsFormExit {
+  transform: scale(1, 1);
+  transform-origin: top;
+  opacity: 1;
+}
+
+.OptionsFormExitActive {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  transform: scale(1, 0);
+}

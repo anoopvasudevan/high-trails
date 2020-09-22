@@ -1,0 +1,37 @@
+.Container {
+  position: relative;
+  /* display: inline-block; */
+  width: 100%;
+}
+
+.SearchInput {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.SearchButton {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: var(--clr-dark);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.SearchButton:hover {
+  transform: scale(1);
+}
+
+.SearchIcon  {
+  transition: transform 200ms ease-in-out;
+}
+
+.SearchButton:hover .SearchIcon {
+  transform: scale(1.5);
+}

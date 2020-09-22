@@ -1,0 +1,120 @@
+.ProductModal {
+  position: absolute;
+  z-index: 1000;
+  width: min(1400px, 90%);
+  left: calc((100vw - min(1400px, 90%)) / 2);
+  top: 2.5vh;
+  /* min-height: 95vh; */
+  display: grid;
+  place-items: center;
+}
+
+.ProductDisplay {
+  width: 100%;
+  border: 2px solid var(--clr-accent);
+  padding: 1rem;
+  background-color: var(--clr-body);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ProductImage img {
+  max-width: 100%;
+}
+
+.ProductTitle {
+  font-size: var(-fs-h3);
+  color: var(--clr-light);
+  text-transform: uppercase;
+  font-size: var(--fw-semi-bold);
+  letter-spacing: 0.1em;
+}
+
+.ProductDesc {
+  color: var(--clr-dark);
+  font-size: var(--fw-reg);
+  line-height: var(--line-height-text);
+}
+
+.ProductInfo {
+  margin-top: 2.5rem;
+}
+
+.ProductInfoTitle {
+  font-size: var(-fs-h3);
+  color: var(--clr-light);
+  font-weight: var(--fw-reg);
+}
+
+.ProductSpecGroup {
+  margin-top: 2rem;
+}
+
+.ProductSpec {
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  color: var(--clr-light);
+  font-weight: var(--fw-light);
+}
+
+.ProductSpecName {
+  text-align: left;
+}
+
+.ProductSpecValue {
+  text-align: right;
+}
+
+.ProductInfo button {
+  margin-top: 2.5rem;
+}
+
+/* .ProductModalEnter {
+  transform: translateY(-200rem);
+  opacity: 0;
+}
+
+.ProductModalEnterActive {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 200ms;
+}
+
+.ProductModalExit {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ProductModalExitActive {
+  transform: translateY(-200rem);
+  opacity: 0;
+  transition: all 200ms;
+} */
+
+
+@media (min-width: 800px) {
+  .ProductDisplay {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .ProductAbout {
+    flex-basis: 60%;
+  }
+
+  .ProductInfo {
+    margin-top: 0;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ProductInfo button {
+      align-self: center;
+    margin-bottom: 2rem;
+  }
+}

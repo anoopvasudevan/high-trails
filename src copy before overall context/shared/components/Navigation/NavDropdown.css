@@ -1,0 +1,46 @@
+.NavDropdown {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 2em); /* 100vh - navbar top margin */
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 0;
+  background-color: var(--clr-light);
+  border-radius:10px;
+}
+
+.Dropdown-enter {
+  /* transform: translateY(-100%); */
+  transform: translateY(0);
+  /* height: 0; */
+}
+
+.Dropdown-enter-active {
+  transform: translateY(0);
+  /* height: 100%; */
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.Dropdown-exit {
+  transform: translateY(0);
+  opacity: 1;
+  /* height: 100%; */
+}
+
+.Dropdown-exit-active {
+  transform: translateY(0);
+  /* height: 0; */
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+@media (min-width: 900px) {
+  .NavDropdown {
+    display: none;
+  }
+}

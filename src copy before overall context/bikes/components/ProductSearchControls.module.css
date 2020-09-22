@@ -1,0 +1,54 @@
+.ButtonGroup {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ButtonGroup .Button {
+  width: 45%;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  outline: none;
+  font-weight: var(--fw-light);
+}
+
+.ButtonGroup .ButtonActive {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.ButtonGroup .Button:hover {
+  transform: scale(1);
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.FilterOptions,
+.SortOptions {
+  display: none;
+}
+
+.FilterOptionsShow,
+.SortOptionsShow {
+  margin-top: 1em;
+  padding: 0 1em 1em;
+  display: block;
+  /* border: 1px solid var(--clr-accent); */
+}
+
+.ActiveFiltersContainer {
+  margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .ProductSearchControls {
+    width: 28%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ProductSearchControls {
+    width: 23%;
+  }
+}

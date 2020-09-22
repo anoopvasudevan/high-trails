@@ -1,0 +1,104 @@
+.Bikes {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.WrapperSection {
+  color: var(--clr-light);
+  padding: calc(var(--navbar-height) + 4rem) 0;
+  text-align: center;
+  background-color: var(--clr-body);
+  /* temporary */
+  min-height: 100vh;
+  /* temporary */
+}
+
+.FlexContainer {
+  margin-top: 2rem;
+}
+/* 
+.ButtonGroup {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ButtonGroup .Button {
+  width: 45%;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  outline: none;
+  font-weight: var(--fw-light);
+}
+
+.ButtonGroup .ButtonActive {
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.ButtonGroup .Button:hover {
+  transform: scale(1);
+  border-color: var(--clr-accent);
+  color: var(--clr-accent);
+}
+
+.FilterOptions,
+.SortOptions {
+  display: none;
+}
+
+.FilterOptionsShow,
+.SortOptionsShow {
+  margin-top: 1em;
+  padding: 0 1em 1em;
+  display: block;
+  border: 1px solid var(--clr-accent);
+} */
+
+.BikesDisplaySummary {
+  text-align: left;
+  margin: 3rem 0;
+}
+
+@media (min-width: 900px) {
+  .FlexContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* .SearchAndFilter {
+    width: 28%;
+  } */
+
+  .SearchResults {
+    width: 70%;
+  }
+
+  .BikesDisplaySummary {
+    margin-top: 0;
+  }
+
+  /* .ButtonGroup {
+    display: flex;
+    flex-direction: column;
+  } */
+/* 
+  .ButtonGroup .Button {
+    display: block;
+    width: 100%;
+  } */
+}
+
+@media (min-width: 1200px) {
+  /* .SearchAndFilter {
+    width: 23%;
+  } */
+
+  .SearchResults {
+    width: 73%;
+  }
+}

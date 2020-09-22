@@ -1,0 +1,56 @@
+/* .InputContainer {
+    display: flex;
+  justify-content: space-between;
+} */
+
+.InputContainer label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CheckboxInput {
+  appearance: none;
+  background-color: var(--clr-dark);
+  height: 1.2em;
+  width: 1.2em;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.CheckboxInput:hover {
+  transform: scale(1.2);
+}
+
+.CheckboxInput:checked::before {
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  background-color: var(--clr-accent);
+}
+
+.RadioInput {
+  appearance: none;
+  background-color: var(--clr-dark);
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.RadioInput:hover {
+  transform: scale(1.2);
+}
+
+.RadioInput:checked::before {
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  border-radius: 50%;
+  background-color: var(--clr-accent);
+}

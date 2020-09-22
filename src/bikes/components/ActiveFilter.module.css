@@ -1,0 +1,16 @@
+.ActiveFilter {
+  margin-right: 3rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  color: var(--clr-dark);
+  /* height: 2rem; */
+}
+
+.ActiveFilter::before {
+  content: "x";
+  padding: 0.5em;
+  color: var(--clr-accent);
+  font-weight: var(--fw-semi-bold);
+  cursor: pointer;
+}
+

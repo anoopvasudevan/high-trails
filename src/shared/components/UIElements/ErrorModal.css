@@ -1,0 +1,19 @@
+.ErrorModal {
+    position: absolute;
+    z-index: 2000;
+    width: min(300px, 90%);
+    border: 1px solid var(--clr-accent);
+    background-color: var(--clr-black);
+    top: 30%;
+    left: calc(50vw - 150px);
+    display: grid;
+    place-items: center;
+    padding: 2em;
+    
+}
+
+.ErrorModal__text {
+    color: var(--clr-light);
+    margin: 0;
+    line-height: var(--line-height-text);
+}

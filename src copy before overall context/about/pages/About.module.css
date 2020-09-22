@@ -1,0 +1,125 @@
+.About {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.WrapperSection {
+  color: var(--clr-light);
+  padding: calc(var(--navbar-height) + 4rem) 0;
+  text-align: center;
+  background-color: var(--clr-body);
+}
+
+.Section + .Section {
+  margin-top: 3rem;
+}
+
+.Section__title {
+  font-size: var(--fs-h4);
+  text-transform: capitalize;
+  font-weight: var(--fw-normal);
+  margin-bottom: 1em;
+  display: inline-block;
+  position: relative;
+}
+
+.Section__title::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  height: 2px;
+  top: calc(100% + 0.2em);
+  left: 10%;
+  background-color: var(--clr-accent);
+}
+
+.Section__text {
+  font-weight: var(--fw-light);
+  line-height: var(--line-height-text);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--clr-dark);
+  position: relative;
+}
+
+.Section__text_bullet {
+  text-align: left;
+  margin-left: 2em;
+}
+
+.Section__text_bullet::before {
+  content: "";
+  position: absolute;
+  width: 0.9em;
+  height: 0.9em;
+  background-color: var(--clr-accent);
+  opacity: 0.5;
+  top: 0.29em;
+  left: -2em;
+}
+
+.Section__text a {
+  text-decoration: none;
+  color: var(--clr-accent);
+}
+
+.Section__logo {
+  background-color: var(--clr-light);
+  border-radius: 2rem;
+  margin: 2rem auto 0;
+  width: min(600px, 100%);
+}
+
+.Logo {
+  width: 90%;
+}
+
+.Section__about {
+  margin-top: 2rem;
+}
+
+.Section__whyus {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+  gap: 0.5rem 2rem;
+  justify-items: center;
+}
+
+.Section__whyus .Section__text {
+  margin-right: 0;
+}
+
+.Section__album {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3.5rem 2rem;
+}
+
+@media (min-width: 1000px) {
+  .Section__about {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .Section__about_info {
+    flex-basis: 45%;
+    text-align: right;
+  }
+
+  .Section__about_info .Section__text {
+    margin-right: 0;
+  }
+
+  .Section__logo {
+    flex-basis: 45%;
+    align-self: flex-start;
+    margin-top: 0;
+  }
+}

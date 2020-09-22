@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Raleway", sans-serif;
+  --ff-secondary: "Oswald", sans-serif;
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-h1: clamp(3.5rem, 10vw, 6rem);
+  /* --fs-h2: clamp(2.5rem, 8vw, 4rem); */
+  --fs-h2: calc(var(--fs-h1) * .7);
+  --fs-h3: clamp(2rem, 8vw, 2.25rem);
+  --fs-h4: clamp(1.5rem, 6vw, 1.7rem);
+  --fs-h5: 1.2rem;
+
+  --line-height-text: 150%;
+
+  --clr-light: #ffffff;
+  --clr-dark: #909090;
+  --clr-black: #000000;
+  --clr-body: #222222;
+  --clr-accent: #ffca00;
+
+  --navbar-height: 90px;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff-primary);
+  position: relative;
+  height: 100%;
+  /* overflow-x: hidden; */
+}
+
+main {
+  position: relative;
+  z-index: 200;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.Container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .Container {
+    width: 85%;
+  }
+}
