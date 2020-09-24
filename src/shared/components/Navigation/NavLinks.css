@@ -9,16 +9,23 @@
 }
 
 .NavLink + .NavLink {
-  margin-top: 2.5em;
+  margin-top: .5rem;
 }
 
 .NavLink a {
   text-decoration: none;
   text-transform: uppercase;
-  padding: 1em;
+  /* padding: 1em; */
   color: var(--clr-black);
   font-weight: var(--fw-semi-bold);
   transition: all 200ms ease-in-out;
+  display: inline-block
+}
+
+.NavLink__content {
+  display: block;
+  outline: none;
+  padding: 1em;
 }
 
 .NavLink a:hover,

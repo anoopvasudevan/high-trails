@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
+import { FilterOptionsStatusContext } from "../../shared/context/filter-options";
 import Button from "../../shared/components/UIElements/Button";
 import classes from "./SearchInput.module.css";
 
-const SearchInput = (props) => {
+const SearchInput = () => {
   const [searchString, setSearchString] = useState("");
 
-  const {onSearch} = props;
+  const { setSearchQuery } = useContext(
+    FilterOptionsStatusContext
+  );
 
-  useEffect(() => {
-    onSearch(searchString);
-  }, [searchString, onSearch]);
 
-  const inputChangeHandler = (e) => setSearchString(e.target.value);
+  const inputChangeHandler = (e) => {
+    setSearchString(e.target.value);
+    setSearchQuery(e.target.value);
+  };
 
+  // console.log("SearchInput - rendering");
   return (
     <div className={classes.Container}>
       <input
@@ -28,7 +32,7 @@ const SearchInput = (props) => {
         size="small"
         inverse
         noborder
-        onClick={onSearch.bind(null, searchString)}
+        onClick={() => setSearchQuery(searchString)}
       >
         <i className={`fas fa-search ${classes.SearchIcon}`}></i>
       </Button>

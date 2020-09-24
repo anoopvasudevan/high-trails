@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./NavLinks.css";
 
@@ -8,26 +8,52 @@ const NavLinks = (props) => {
     <ul className="NavLinks">
       <li className="NavLink">
         <NavLink to="/bikes" onClick={props.onClick}>
-          Bikes
+          <span className="NavLink__content" tabIndex="-1">
+            Bikes
+          </span>
         </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/accessories">Accessories</NavLink>
+        <NavLink to="/accessories">
+          <span className="NavLink__content" tabIndex="-1">
+            Accessories
+          </span>
+        </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/parts">Parts</NavLink>
+        <NavLink to="/parts">
+          <span className="NavLink__content" tabIndex="-1">
+            Parts
+          </span>
+        </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/service">Service</NavLink>
+        <NavLink to="/service">
+          <span className="NavLink__content" tabIndex="-1">
+            Service
+          </span>
+        </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/events">Events</NavLink>
+        <NavLink to="/events">
+          <span className="NavLink__content" tabIndex="-1">
+            Events
+          </span>
+        </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/about">
+          <span className="NavLink__content" tabIndex="-1">
+            About
+          </span>
+        </NavLink>
       </li>
       <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/contact">
+          <span className="NavLink__content" tabIndex="-1">
+            Contact
+          </span>
+        </NavLink>
       </li>
     </ul>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import PropTypes from "prop-types";
+
 import "./Backdrop.css";
 
 const Backdrop = (props) => {
@@ -12,6 +14,11 @@ const Backdrop = (props) => {
     ></div>,
     document.getElementById("backdrop-hook")
   );
+};
+
+Backdrop.propTypes = {
+  onClick: PropTypes.func,
+  style: PropTypes.object,
 };
 
 export default Backdrop;

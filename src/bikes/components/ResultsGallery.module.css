@@ -16,3 +16,13 @@
 .ResultsGallery button {
     margin-top: 1rem;
 }
+
+.BikesDisplaySummary {
+  text-align: left;
+  margin: 0 0 3rem 0;
+}
+
+.BikesDisplaySummary a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}

@@ -9,10 +9,12 @@
 .Header.Scrolled {
   padding-top: 0;
   background-color: var(--clr-black);
+  /* box-shadow: 0 1px 5px #74381a; */
 }
 
 .NavBar {
   position: relative;
+  /* margin-top: 1em; */
   z-index: 250;
   display: flex;
   justify-content: space-between;
@@ -22,6 +24,7 @@
 .NavBar__logo-img {
   height: 70px;
   transition: all 200ms ease-in-out;
+  outline: none;
 }
 
 .Header.Scrolled .NavBar__logo-img {

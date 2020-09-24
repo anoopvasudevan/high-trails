@@ -8,6 +8,7 @@ export const useHttpClient = () => {
 
   const sendRequest = useCallback(
     async (url, method = "GET", body = null, headers = {}) => {
+      // console.log("useHttpClient / sendRequest - rendering");
       setIsLoading(true);
 
       const httpAbortCtrl = new AbortController();
@@ -49,5 +50,6 @@ export const useHttpClient = () => {
     };
   }, []);
 
+  // console.log("useHttpClient - rendering");
   return { isLoading, error, sendRequest, clearError };
 };

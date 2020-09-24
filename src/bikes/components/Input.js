@@ -7,6 +7,7 @@ const Input = (props) => {
 
   const id = option.replace(" ", "-");
 
+  // console.log("Input - rendering");
   return (
     <div className={classes.InputContainer}>
       <label htmlFor={id} name={name}>

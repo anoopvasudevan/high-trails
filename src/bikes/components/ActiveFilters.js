@@ -30,7 +30,7 @@ const ActiveFilters = (props) => {
   const resetSortOption = (name) => {
     sortOption.reset(sortOption.default);
   };
-
+  // console.log("ActiveFilters - rendering");
   return (
     <React.Fragment>
       {activeCategoryFilters.length !== 0 && (

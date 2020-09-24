@@ -9,7 +9,7 @@
   width: 45%;
   letter-spacing: 0.1em;
   border-radius: 0;
-  outline: none;
+  /* outline: none; */
   font-weight: var(--fw-light);
 }
 

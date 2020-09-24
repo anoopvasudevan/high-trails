@@ -132,8 +132,8 @@ export const ALL_PRODUCTS = [
 export const SORT_OPTIONS = [
   { name: "Price: Low to High", field: "price", order: "Ascending" },
   { name: "Price: High to Low", field: "price", order: "Descending" },
-  { name: "Brands: A to Z", field: "brand", order: "Ascending" },
-  { name: "Brands: Z to A", field: "brand", order: "Descending" },
+  { name: "Brands: A to Z", field: "make", order: "Ascending" },
+  { name: "Brands: Z to A", field: "make", order: "Descending" },
 ];
 
 export const CATEGORY_OPTIONS = ["Mountain", "Road", "BMX", "Hybrid"];

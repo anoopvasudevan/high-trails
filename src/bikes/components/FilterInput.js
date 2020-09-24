@@ -14,16 +14,12 @@ const FilterInput = (props) => {
     setShowOptions((state) => !state);
   };
 
+  // console.log("FilterInput - rendering");
   return (
     <div className={classes.Container}>
       <div className={classes.TitleContainer} onClick={buttonClickHandler}>
         <p className={classes.Title}>{title}</p>
-        <Button
-          className={classes.Button}
-          size="small"
-          inverse
-          noborder
-        >
+        <Button className={classes.Button} size="small" inverse noborder>
           <div
             className={`${classes.Icon} ${showOptions && classes.IconRotate}`}
           >

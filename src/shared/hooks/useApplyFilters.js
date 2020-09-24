@@ -1,8 +1,7 @@
-
 import { SORT_OPTIONS } from "../../bikes/components/ProductsCatalogue";
 
 export const useApplyFilters = (...args) => {
-  const [ categoriesState, brandsState, sortOptionsState, loadedProducts ] = args;
+  const [categoriesState, brandsState, sortOptionsState, loadedProducts] = args;
 
   const categoryFilters = [];
   for (const key in categoriesState.optionsStatus) {
@@ -20,10 +19,9 @@ export const useApplyFilters = (...args) => {
       (product) => categoryFilters.indexOf(product.category) !== -1
     );
   }
-
   if (brandFilters.length) {
     filteredProducts = filteredProducts.filter(
-      (product) => brandFilters.indexOf(product.brand) !== -1
+      (product) => brandFilters.indexOf(product.make) !== -1
     );
   }
 
@@ -42,6 +40,8 @@ export const useApplyFilters = (...args) => {
 
     return 0;
   });
+
+  // console.log("useApplyFilters - rendering");
 
   return filteredProducts;
 };

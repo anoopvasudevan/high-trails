@@ -9,6 +9,7 @@ const ActiveFilter = (props) => {
     filterReset(e.target.dataset.name);
   };
 
+  // console.log("ActiveFilter - rendering");
   return (
     <span
       className={classes.ActiveFilter}

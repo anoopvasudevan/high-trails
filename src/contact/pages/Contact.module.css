@@ -71,6 +71,8 @@
 .FormItem {
     margin-bottom: 2rem;
 }
+
+
 .FormItem * {
     display: block;
     width: 100%;
@@ -90,6 +92,7 @@
     border: none;
     border-bottom: 1px solid var(--clr-light);
     background-color: rgba(196, 196, 196, 0.05);
+    outline: none;
 }
 
 .ReviewForm button {

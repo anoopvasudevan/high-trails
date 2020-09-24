@@ -72,5 +72,6 @@ export const useOptionsState = (options, currOption = "") => {
     });
   };
 
+  // console.log("useOptionsState - rendering");
   return { optionsState, updateOption, resetOptionsStatus, resetCurrOption };
 };

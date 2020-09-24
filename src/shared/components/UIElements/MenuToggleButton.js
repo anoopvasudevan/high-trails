@@ -13,8 +13,10 @@ const MenuToggleButton = (props) => {
         props.clicked();
       }}
     >
-      <span className="MenuToggleBtn__top-bar" />
-      <span className="MenuToggleBtn__bottom-bar" />
+      <div tabIndex="-1">
+        <span className="MenuToggleBtn__top-bar" />
+        <span className="MenuToggleBtn__bottom-bar" />
+      </div>
     </button>
   );
 };

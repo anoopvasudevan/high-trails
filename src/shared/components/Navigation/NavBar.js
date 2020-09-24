@@ -45,7 +45,7 @@ const NavBar = () => {
         <div style={{ position: "relative" }}>
           <div className="NavBar">
             <Link to="/" className="NavBar__logo" onClick={logoClickedHandler}>
-              <img className="NavBar__logo-img" src={Logo} alt="HT Logo" />
+              <img className="NavBar__logo-img" src={Logo} alt="HT Logo" tabIndex="-1" />
             </Link>
 
             <nav className="NavBar__main-nav">

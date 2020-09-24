@@ -1,0 +1,13 @@
+.AppError {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-body);
+}
+
+.AppError__message {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h3);
+  color: var(--clr-accent);
+}

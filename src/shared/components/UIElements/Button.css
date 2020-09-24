@@ -5,11 +5,17 @@
   border: 2px solid var(--clr-accent);
   background-color: var(--clr-accent);
   border-radius: 5px;
-  padding: 0.5em 1em;
+  /* padding: 0.5em 1em; */
   text-decoration: none;
   color: var(--clr-black);
   cursor: pointer;
   transition: all 200ms ease-in-out;
+}
+
+.button__content {
+  display: block;
+  outline: none;
+  padding: 0.5em 1em;
 }
 
 .button--inverse {
@@ -27,16 +33,16 @@
   border: none;
 }
 
-.button--large {
+.button--large .button__content {
   padding: 0.8em 1.2em;
 }
 
-.button--small {
+.button--small .button__content  {
   padding: 0.2em 0.8em;
   font-size: 0.9rem;
 }
 
-.button--xsmall {
+.button--xsmall .button__content {
   padding: 0.1em 0.8em;
   font-size: 0.9rem;
 }
@@ -61,8 +67,10 @@ button:disabled {
   transform: scale(1.1, 1.1);
 }
 
+
+
 @media (max-width: 600px) {
-  .button--large {
+  .button--large .button__content {
     padding: 0.7em 1.2em;
     font-size: 0.9rem;
   }

@@ -9,8 +9,6 @@ import { FilterOptionsStatusContext } from "../../shared/context/filter-options"
 import classes from "./ProductSearchControls.module.css";
 
 const ProductSearchControls = (props) => {
-  const {onSearch} = props;
-
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [showSortOptions, setShowSortOptions] = useState(false);
 
@@ -23,7 +21,7 @@ const ProductSearchControls = (props) => {
     updateSortOptionsState,
     resetCategoryState,
     resetBrandsState,
-    resetSortOptionsState
+    resetSortOptionsState,
   } = useContext(FilterOptionsStatusContext);
 
   const categories = Object.keys(categoriesState.optionsStatus);
@@ -49,16 +47,17 @@ const ProductSearchControls = (props) => {
 
   useOutsideClick(searchControlsRef, clickedOutsideHandler);
 
+  // console.log("ProductSearchControls - rendering");
   return (
     <div className={classes.ProductSearchControls}>
-      <SearchInput onSearch={onSearch} />
+      <SearchInput />
       <div ref={searchControlsRef}>
         <div className={classes.ButtonGroup}>
           <Button
             className={`${classes.Button} ${
               showFilterOptions && classes.ButtonActive
             }`}
-            size="medium"
+            // size="medium"
             gray
             inverse
             onClick={filterClickedHandler}
@@ -69,7 +68,7 @@ const ProductSearchControls = (props) => {
             className={`${classes.Button} ${
               showSortOptions && classes.ButtonActive
             }`}
-            size="medium"
+            // size="medium"
             gray
             inverse
             onClick={sortClickedHandler}
@@ -87,7 +86,6 @@ const ProductSearchControls = (props) => {
             title="Categories"
             options={categories}
             filterType="filter"
-            // onFilter={onFilter}
             optionsState={categoriesState}
             onOptionSelect={updateCategoryState}
           />
@@ -96,7 +94,6 @@ const ProductSearchControls = (props) => {
             title="Brands"
             options={brands}
             filterType="filter"
-            // onFilter={onFilter}
             optionsState={brandsState}
             onOptionSelect={updateBrandsState}
           />
@@ -111,11 +108,11 @@ const ProductSearchControls = (props) => {
             title="Sort"
             options={sortOptions}
             filterType="sort"
-            // onSort={onSort}
             optionsState={sortOptionsState}
             onOptionSelect={updateSortOptionsState}
           />
         </div>
+
         {!showFilterOptions && !showSortOptions && (
           <div className={classes.ActiveFiltersContainer}>
             <ActiveFilters

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import "./Button.css";
 
@@ -17,7 +18,9 @@ const Button = (props) => {
         href={props.href}
         className={`${classList.join(" ")} ${props.className}`}
       >
-        {props.children}
+        <span className="button__content" tabIndex="-1">
+          {props.children}
+        </span>
       </a>
     );
   }
@@ -29,7 +32,9 @@ const Button = (props) => {
         exact={props.exact}
         className={`${classList.join(" ")} ${props.className}`}
       >
-        {props.children}
+        <span className="button__content" tabIndex="-1">
+          {props.children}
+        </span>
       </Link>
     );
   }
@@ -41,9 +46,26 @@ const Button = (props) => {
       onClick={props.onClick}
       disabled={props.disabled}
     >
-      {props.children}
+      <span className="button__content" tabIndex="-1">
+        {props.children}
+      </span>
     </button>
   );
+};
+
+Button.propTypes = {
+  size: PropTypes.oneOf(["large", "small", "xsmall", "default"]),
+  inverse: PropTypes.bool,
+  gray: PropTypes.bool,
+  special: PropTypes.bool,
+  noborder: PropTypes.bool,
+  href: PropTypes.string,
+  className: PropTypes.string,
+  to: PropTypes.string,
+  exact: PropTypes.bool,
+  type: PropTypes.oneOf(["button", "submit", "reset"]),
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 export default Button;

@@ -24,6 +24,7 @@ const OptionsList = (props) => {
     if (inputType === "radio")
       checkedStatus = optionsState.currOption === option;
 
+      // console.log("OptionsList - rendering");
     return (
       <div className={classes.Option} key={index}>
         <Input
