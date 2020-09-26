@@ -40,7 +40,7 @@ const ActiveFilters = (props) => {
       <div className={classes.ActiveFilters}>
         {activeCategoryFilters.map((category, index) => (
           <ActiveFilter
-            key={index}
+            key={category}
             filterName={category}
             filterReset={resetCategoryFilter}
           />
@@ -54,7 +54,7 @@ const ActiveFilters = (props) => {
       <div className={classes.ActiveFilters}>
         {activeBrandFilters.map((brand, index) => (
           <ActiveFilter
-            key={index}
+            key={brand}
             filterName={brand}
             filterReset={resetBrandFilter}
           />

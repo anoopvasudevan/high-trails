@@ -24,11 +24,11 @@ const FilterOptionsContextProvider = (props) => {
   const [searchQuery, setSearchQuery] = useState("");
   // console.log(products);
 
-  const categories = [];
-  const brands = [];
+  const categories = new Set();
+  const brands = new Set();
   products.forEach((product) => {
-    categories.push(product.category);
-    brands.push(product.make);
+    categories.add(product.category);
+    brands.add(product.make);
   });
 
   const extractedSortOptions = SORT_OPTIONS.map((option) => option.name);
@@ -37,13 +37,13 @@ const FilterOptionsContextProvider = (props) => {
     optionsState: categoriesState,
     updateOption: updateCategoryState,
     resetOptionsStatus: resetCategoryState,
-  } = useOptionsState(categories);
+  } = useOptionsState([...categories]);
 
   const {
     optionsState: brandsState,
     updateOption: updateBrandsState,
     resetOptionsStatus: resetBrandsState,
-  } = useOptionsState(brands);
+  } = useOptionsState([...brands]);
 
   const {
     optionsState: sortOptionsState,

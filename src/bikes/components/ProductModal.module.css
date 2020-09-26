@@ -35,6 +35,8 @@
   color: var(--clr-dark);
   font-size: var(--fw-reg);
   line-height: var(--line-height-text);
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 .ProductInfo {
@@ -70,29 +72,8 @@
 
 .ProductInfo button {
   margin-top: 2.5rem;
+  /* margin-bottom: 0; */
 }
-
-/* .ProductModalEnter {
-  transform: translateY(-200rem);
-  opacity: 0;
-}
-
-.ProductModalEnterActive {
-  transform: translateY(0);
-  opacity: 1;
-  transition: all 200ms;
-}
-
-.ProductModalExit {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.ProductModalExitActive {
-  transform: translateY(-200rem);
-  opacity: 0;
-  transition: all 200ms;
-} */
 
 
 @media (min-width: 800px) {
@@ -115,6 +96,6 @@
 
   .ProductInfo button {
       align-self: center;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
 }

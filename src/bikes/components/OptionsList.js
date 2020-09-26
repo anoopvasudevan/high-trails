@@ -26,7 +26,7 @@ const OptionsList = (props) => {
 
       // console.log("OptionsList - rendering");
     return (
-      <div className={classes.Option} key={index}>
+      <div className={classes.Option} key={option}>
         <Input
           type={inputType}
           name={title}

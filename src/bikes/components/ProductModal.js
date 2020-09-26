@@ -1,16 +1,22 @@
 import React from "react";
-// import ReactDOM from "react-dom";
-// import { CSSTransition } from "react-transition-group";
 
-// import Backdrop from "../../shared/components/UIElements/Backdrop";
 import Modal from "../../shared/components/UIElements/Modal";
 import Button from "../../shared/components/UIElements/Button";
 import classes from "./ProductModal.module.css";
 
+const images = [
+  "https://images.unsplash.com/photo-1588879169484-8fe78d21080a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80",
+  "https://images.unsplash.com/photo-1589118949245-7d38baf380d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1570169043013-de63774bbf97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+  "https://images.unsplash.com/photo-1567448400815-59d0a6cdb52d?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
+  "https://images.unsplash.com/photo-1561642445-b789b9a7e6f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1070&q=80",
+  "https://images.unsplash.com/photo-1574965234283-2f20a4cffa43?ixlib=rb-1.2.1&auto=format&fit=crop&w=669&q=80",
+];
+
 const ProductModalOverlay = (props) => {
   const modalPositionTop = window.scrollY + 0.05 * window.innerHeight;
   const { product } = props;
-
+  // console.log("ProductModalOverlay rendering");
   const content = (
     <div
       className={`${classes.ProductModal} ${props.className}`}

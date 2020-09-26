@@ -4,6 +4,19 @@
   gap: 5rem 2rem;
 }
 
+
+.ResultsGallery__card {
+  padding: 1rem;
+  transition: all 200ms ease-in-out;
+}
+
+.ResultsGallery__card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  box-shadow: 0 0px 10px -3px var(--clr-accent);
+/* transform: translateY(-1rem); */
+}
+
 .ResultsGallery img {
   /* display: block; */
   width: 100%;
@@ -15,14 +28,4 @@
 
 .ResultsGallery button {
     margin-top: 1rem;
-}
-
-.BikesDisplaySummary {
-  text-align: left;
-  margin: 0 0 3rem 0;
-}
-
-.BikesDisplaySummary a {
-  color: var(--clr-accent);
-  text-decoration: none;
 }

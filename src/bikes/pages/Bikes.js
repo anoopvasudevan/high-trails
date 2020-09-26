@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Container from "../../shared/components/Container";
 import FooterOverlay from "../../shared/components/Footer/FooterOverlay";
 import ProductSearchControls from "../components/ProductSearchControls";
-import ResultsGallery from "../components/ResultsGallery";
+import ProductSearchResults from "../components/ProductSearchResults";
 
 import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
@@ -46,7 +46,7 @@ const Bikes = (props) => {
                   <ProductSearchControls />
 
                   <div className={classes.SearchResults}>
-                    <ResultsGallery
+                    <ProductSearchResults
                       totalLoadedProducts={loadedProducts.length}
                     />
                   </div>

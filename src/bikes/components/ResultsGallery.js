@@ -1,57 +1,38 @@
-import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
+import ProductModal from "./ProductModal";
 import Card from "../../shared/components/UIElements/Card";
 import Button from "../../shared/components/UIElements/Button";
-import ProductModal from "../components/ProductModal";
-import { FilterOptionsStatusContext } from "../../shared/context/filter-options";
 import classes from "./ResultsGallery.module.css";
 
-const ResultsGallery = (props) => {
+const ResultsGallery = ({ products }) => {
   const [selectedProduct, setSelectedProduct] = useState({});
-  const { filteredProducts } = useContext(FilterOptionsStatusContext);
 
-  const showProductHandler = (index) => {
-    setSelectedProduct(filteredProducts[index]);
+  const showProductHandler = (productId) => {
+    const product = products.filter((product) => product.id === productId);
+    setSelectedProduct(product[0]);
   };
 
   const cancelProductHandler = () => {
     setSelectedProduct({});
   };
 
-  let displayMessage = "";
-  if (filteredProducts.length) {
-    displayMessage = (
-      <p className={classes.BikesDisplaySummary}>
-        Displaying {filteredProducts.length} of {props.totalLoadedProducts}{" "}
-        products
-      </p>
-    );
-  } else {
-    displayMessage = (
-      <p className={classes.BikesDisplaySummary}>
-        We are sorry, we cannot find any matches right now. Please{" "}
-        <Link to="/contact">contact us</Link> for assistance.
-      </p>
-    );
-  }
-
-  // console.log("ResultsGallery - rendering");
   return (
-    <React.Fragment>
-      {displayMessage}
+    <>
       <div className={classes.ResultsGallery}>
-        {filteredProducts.map((product, index) => {
+        {products.map((product) => {
           return (
-            <React.Fragment key={index}>
+            <React.Fragment key={product.id}>
               <Card
                 image={product.image}
                 title={product.name}
                 subTitle={`Rs. ${product.price}`}
+                onClick={() => showProductHandler(product.id)}
+                customClass={classes.ResultsGallery__card}
               >
                 <Button
                   size="xsmall"
-                  onClick={showProductHandler.bind(null, index)}
+                  onClick={() => showProductHandler(product.id)}
                 >
                   Details
                 </Button>
@@ -66,7 +47,7 @@ const ResultsGallery = (props) => {
         onCancel={cancelProductHandler}
         product={selectedProduct}
       />
-    </React.Fragment>
+    </>
   );
 };
 

@@ -9,7 +9,7 @@
 .Header.Scrolled {
   padding-top: 0;
   background-color: var(--clr-black);
-  /* box-shadow: 0 1px 5px #74381a; */
+  box-shadow: 0 2px 15px -3px var(--clr-accent);
 }
 
 .NavBar {

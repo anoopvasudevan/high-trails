@@ -1,0 +1,35 @@
+.DisplayBar {
+  margin: 0 0 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BikesDisplaySummary {
+  margin: 0;
+}
+
+.BikesDisplaySummary a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
+
+.Pagination__bottom {
+  display: flex;
+  justify-content: flex-end;
+ margin-top: 3rem;
+}
+
+@media (max-width: 500px) {
+  .DisplayBar {
+    flex-direction: column;
+  }
+
+  .BikesDisplaySummary {
+  margin-bottom: 1rem;
+}
+
+.Pagination__bottom {
+ justify-content: center;
+}
+}
