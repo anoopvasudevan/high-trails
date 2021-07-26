@@ -32,7 +32,7 @@ const ALL_PHOTOS = [
 
 const ImageGallery = () => {
   const windowSize = useBreakpoints(703, 1135, 1525);
-  console.log(windowSize);
+  // console.log(windowSize);
   let noOfColumns = 1;
   if (windowSize === "x-small") noOfColumns = 1;
   if (windowSize === "small") noOfColumns = 2;

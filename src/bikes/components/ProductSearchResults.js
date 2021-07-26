@@ -8,7 +8,7 @@ import classes from "./ProductSearchResults.module.css";
 
 const ProductSearchResults = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(5);
+  const [productsPerPage] = useState(9);
   const { filteredProducts } = useContext(FilterOptionsStatusContext);
 
   const paginate = useCallback((page) => {
@@ -18,14 +18,14 @@ const ProductSearchResults = (props) => {
   let displayMessage = "";
   if (filteredProducts.length) {
     displayMessage = (
-      <p className={classes.BikesDisplaySummary}>
+      <p className={classes.ProductsDisplaySummary}>
         Displaying {filteredProducts.length} of {props.totalLoadedProducts}{" "}
         products
       </p>
     );
   } else {
     displayMessage = (
-      <p className={classes.BikesDisplaySummary}>
+      <p className={classes.ProductsDisplaySummary}>
         We are sorry, we cannot find any matches right now. Please{" "}
         <Link to="/contact">contact us</Link> for assistance.
       </p>

@@ -8,7 +8,14 @@ import classes from "./FilterInput.module.css";
 const FilterInput = (props) => {
   const [showOptions, setShowOptions] = useState(false);
 
-  const { title, options, filterType, optionsState, onOptionSelect } = props;
+  const {
+    title,
+    options,
+    filterType,
+    optionsState,
+    onOptionSelect,
+  } = props;
+
 
   const buttonClickHandler = () => {
     setShowOptions((state) => !state);

@@ -36,16 +36,21 @@ const NavBar = () => {
 
   const logoClickedHandler = () => {
     setOpenDropdownMenu(false);
-  }
+  };
 
   return (
-    <header className={`Header ${scrolled && "Scrolled"}`}>
+    <header className={`Header ${scrolled && !openDropdownMenu && "Scrolled"}`}>
       <Container>
         {/* below div with position:relative for nav dropdown */}
         <div style={{ position: "relative" }}>
           <div className="NavBar">
             <Link to="/" className="NavBar__logo" onClick={logoClickedHandler}>
-              <img className="NavBar__logo-img" src={Logo} alt="HT Logo" tabIndex="-1" />
+              <img
+                className="NavBar__logo-img"
+                src={Logo}
+                alt="HT Logo"
+                tabIndex="-1"
+              />
             </Link>
 
             <nav className="NavBar__main-nav">
@@ -64,9 +69,9 @@ const NavBar = () => {
             <nav>
               <NavLinks onClick={dropdownMenuHandler} />
             </nav>
-            <p>SOCIAL MEDIA LINKS</p>
+            
           </NavDropdown>
-          {/* <Backdrop onClick={dropdownMenuHandler} /> */}
+
           {openDropdownMenu && <Backdrop onClick={dropdownMenuHandler} />}
         </div>
       </Container>

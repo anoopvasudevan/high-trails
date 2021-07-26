@@ -8,7 +8,7 @@ import { useOutsideClick } from "../../shared/hooks/useOutsideClick";
 import { FilterOptionsStatusContext } from "../../shared/context/filter-options";
 import classes from "./ProductSearchControls.module.css";
 
-const ProductSearchControls = (props) => {
+const ProductSearchControls = () => {
   const [showFilterOptions, setShowFilterOptions] = useState(false);
   const [showSortOptions, setShowSortOptions] = useState(false);
 
@@ -57,7 +57,6 @@ const ProductSearchControls = (props) => {
             className={`${classes.Button} ${
               showFilterOptions && classes.ButtonActive
             }`}
-            // size="medium"
             gray
             inverse
             onClick={filterClickedHandler}
@@ -113,24 +112,24 @@ const ProductSearchControls = (props) => {
           />
         </div>
 
-        {!showFilterOptions && !showSortOptions && (
-          <div className={classes.ActiveFiltersContainer}>
-            <ActiveFilters
-              filters={{
-                category: {
-                  state: categoriesState,
-                  reset: resetCategoryState,
-                },
-                brand: { state: brandsState, reset: resetBrandsState },
-                sortOption: {
-                  default: sortOptions[0],
-                  state: sortOptionsState,
-                  reset: resetSortOptionsState,
-                },
-              }}
-            />
-          </div>
-        )}
+        {/* {!showFilterOptions && !showSortOptions && ( */}
+        <div className={classes.ActiveFiltersContainer}>
+          <ActiveFilters
+            filters={{
+              category: {
+                state: categoriesState,
+                reset: resetCategoryState,
+              },
+              brand: { state: brandsState, reset: resetBrandsState },
+              sortOption: {
+                default: sortOptions[0],
+                state: sortOptionsState,
+                reset: resetSortOptionsState,
+              },
+            }}
+          />
+        </div>
+        {/* )} */}
       </div>
     </div>
   );

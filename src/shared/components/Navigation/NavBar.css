@@ -27,8 +27,18 @@
   outline: none;
 }
 
+.NavBar__logo-img:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 0px 5px -1px var(--clr-accent); */
+}
+
+
 .Header.Scrolled .NavBar__logo-img {
   transform: scale(.9, .9);
+}
+
+.Header.Scrolled .NavBar__logo-img:hover {
+  transform: scale(1);
 }
 
 .NavBar__main-nav {

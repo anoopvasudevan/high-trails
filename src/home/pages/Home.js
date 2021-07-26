@@ -6,17 +6,21 @@ import Brands from "../components/Brands";
 import Activities from "../components/Activities";
 import Testimonials from "../components/Testimonials";
 import FooterOverlay from "../../shared/components/Footer/FooterOverlay";
+import Footer from "../../shared/components/Footer/Footer";
 import "./Home.css";
 
 const Home = () => {
   return (
     <article className="Home">
-      <Landing />
-      <Services />
-      <Brands />
-      <Activities />
-      <Testimonials />
+      <div style={{ position: "relative", zIndex: "10" }}>
+        <Landing />
+        <Services />
+        <Brands />
+        <Activities />
+        <Testimonials />
+      </div>
       <FooterOverlay />
+      <Footer />
     </article>
   );
 };

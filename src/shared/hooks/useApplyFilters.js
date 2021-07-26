@@ -1,4 +1,4 @@
-import { SORT_OPTIONS } from "../../bikes/components/ProductsCatalogue";
+import { SORT_OPTIONS } from "../../bikes/components/SortOptions";
 
 export const useApplyFilters = (...args) => {
   const [categoriesState, brandsState, sortOptionsState, loadedProducts] = args;

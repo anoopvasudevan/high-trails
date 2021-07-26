@@ -75,3 +75,10 @@ button:disabled {
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 350px) {
+  .button--large .button__content {
+    padding: 0.6em 1.1em;
+    font-size: 0.8rem;
+  }
+}

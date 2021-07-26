@@ -12,7 +12,7 @@
 .ProductDisplay {
   width: 100%;
   border: 2px solid var(--clr-accent);
-  padding: 1rem;
+  padding: 2rem;
   background-color: var(--clr-body);
   text-align: center;
   display: flex;
@@ -21,6 +21,8 @@
 
 .ProductImage img {
   max-width: 100%;
+  object-fit: scale-down;
+  display: block;
 }
 
 .ProductTitle {

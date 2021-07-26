@@ -1,16 +1,3 @@
-.About {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.WrapperSection {
-  color: var(--clr-light);
-  padding: calc(var(--navbar-height) + 4rem) 0;
-  text-align: center;
-  background-color: var(--clr-body);
-}
 
 .Section + .Section {
   margin-top: 3rem;

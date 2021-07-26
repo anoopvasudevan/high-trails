@@ -1,0 +1,38 @@
+.SocialIcons {
+  width: max-content;
+  /* margin: 0 auto; */
+  padding: 1rem;
+}
+
+.SocialIcons a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+.SocialIcons a + a {
+  margin-left: 2rem;
+}
+
+.FacebookIcon,
+.InstagramIcon,
+.TwitterIcon {
+  transition: all 200ms ease-in-out;
+}
+
+.FacebookIcon:hover,
+.InstagramIcon:hover,
+.TwitterIcon:hover {
+  transform: scale(1.2);
+}
+
+.FacebookIcon:hover {
+  color: #1877f2;
+}
+
+.InstagramIcon:hover {
+  color: #c32aa3;
+}
+
+.TwitterIcon:hover {
+  color: #1da1f2;
+}

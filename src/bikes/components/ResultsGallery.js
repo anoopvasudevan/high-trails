@@ -17,6 +17,7 @@ const ResultsGallery = ({ products }) => {
     setSelectedProduct({});
   };
 
+
   return (
     <>
       <div className={classes.ResultsGallery}>
@@ -24,7 +25,7 @@ const ResultsGallery = ({ products }) => {
           return (
             <React.Fragment key={product.id}>
               <Card
-                image={product.image}
+                image={product.images[0]}
                 title={product.name}
                 subTitle={`Rs. ${product.price}`}
                 onClick={() => showProductHandler(product.id)}

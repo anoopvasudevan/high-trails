@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 import { useOptionsState } from "../hooks/useOptionsState";
 import { useApplyFilters } from "../hooks/useApplyFilters.js";
-import { SORT_OPTIONS } from "../../bikes/components/ProductsCatalogue";
+import { SORT_OPTIONS } from "../../bikes/components/SortOptions";
 
 export const FilterOptionsStatusContext = createContext({
   categoriesState: {},

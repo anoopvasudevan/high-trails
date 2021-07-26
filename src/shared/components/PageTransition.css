@@ -1,0 +1,17 @@
+.page-fade-enter {
+  opacity: 0.01;
+}
+
+.page-fade-enter.page-fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in 150ms;
+}
+
+.page-fade-exit {
+  opacity: 1;
+}
+
+.page-fade-exit.page-fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 150ms ease-in;
+}

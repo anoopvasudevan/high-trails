@@ -1,0 +1,45 @@
+.ScrollIndicator {
+  display: grid;
+  place-items: center;
+}
+
+.ScrollIndicator span {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-bottom: 1px solid var(--clr-light);
+  border-right: 1px solid var(--clr-light);
+  /* transform: rotate(45deg) translate(-10px, -10px); */
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: animate 2s infinite;
+  
+}
+
+.ScrollIndicator span:nth-child(1) {
+    animation-delay: .63s;
+}
+.ScrollIndicator span:nth-child(2) {
+    animation-delay: 1.23s;
+}
+.ScrollIndicator span:nth-child(3) {
+    animation-delay: 1.83s;
+}
+
+@keyframes animate {
+
+0% {
+    opacity: 0;
+}
+
+50% {
+    opacity: 1;
+}
+
+100% {
+    opacity: 0;
+    /* transform: rotate(45deg) translate(10px, 10px); */
+}
+
+
+}

@@ -5,11 +5,11 @@
   align-items: center;
 }
 
-.BikesDisplaySummary {
+.ProductsDisplaySummary {
   margin: 0;
 }
 
-.BikesDisplaySummary a {
+.ProductsDisplaySummary a {
   color: var(--clr-accent);
   text-decoration: none;
 }
@@ -25,7 +25,7 @@
     flex-direction: column;
   }
 
-  .BikesDisplaySummary {
+  .ProductsDisplaySummary {
   margin-bottom: 1rem;
 }
 

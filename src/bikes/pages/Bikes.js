@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Container from "../../shared/components/Container";
-import FooterOverlay from "../../shared/components/Footer/FooterOverlay";
+import PageWrapper from "../../shared/components/PageWrapper";
 import ProductSearchControls from "../components/ProductSearchControls";
 import ProductSearchResults from "../components/ProductSearchResults";
 
@@ -35,29 +34,23 @@ const Bikes = (props) => {
     <>
       <ErrorModal error={error} onCancel={clearError} />
 
-      <article className={classes.Bikes}>
-        <section className={classes.WrapperSection}>
-          <Container>
-            {isLoading && <LoadingSpinner />}
+      <PageWrapper>
+        {isLoading && <LoadingSpinner />}
 
-            {!isLoading && loadedProducts.length && (
-              <FilterOptionsContextProvider products={loadedProducts}>
-                <div className={classes.FlexContainer}>
-                  <ProductSearchControls />
+        {!isLoading && loadedProducts.length && (
+          <FilterOptionsContextProvider products={loadedProducts}>
+            <div className={classes.FlexContainer}>
+              <ProductSearchControls />
 
-                  <div className={classes.SearchResults}>
-                    <ProductSearchResults
-                      totalLoadedProducts={loadedProducts.length}
-                    />
-                  </div>
-                </div>
-              </FilterOptionsContextProvider>
-            )}
-          </Container>
-        </section>
-
-        <FooterOverlay />
-      </article>
+              <div className={classes.SearchResults}>
+                <ProductSearchResults
+                  totalLoadedProducts={loadedProducts.length}
+                />
+              </div>
+            </div>
+          </FilterOptionsContextProvider>
+        )}
+      </PageWrapper>
     </>
   );
 };

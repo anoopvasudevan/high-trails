@@ -1,0 +1,121 @@
+.CardIcon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.CardIcon i {
+  font-size: large;
+}
+
+.CardIcon:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  right: 150%;
+}
+
+.CardIcon:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  top: 50%;
+  left: 150%;
+}
+
+/* Contact Us page */
+
+.PhoneCard {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.AddressCard {
+  position: relative;
+  text-align: center;
+}
+
+.PhoneCard p,
+.AddressCard p {
+  font-weight: var(--fw-light);
+  line-height: calc(var(--line-height-text) * 1);
+  color: var(--clr-dark);
+  position: relative;
+  margin: 0;
+}
+
+.PhoneCard p {
+  /* letter-spacing: 0.1em; */
+}
+
+.PhoneNumber + .PhoneNumber {
+  margin-top: 0.5rem;
+}
+
+.Address + .Address {
+  margin-top: 2rem;
+}
+
+/* Footer */
+
+.FooterPhoneCard .CardIcon,
+.FooterAddressCard .CardIcon {
+  margin-bottom: 0.8rem;
+}
+
+.FooterPhoneCard {
+  margin-bottom: 2rem;
+}
+
+.FooterPhoneCard p,
+.FooterAddressCard p {
+  line-height: 1.3em;
+}
+
+.FooterAddressCard .Address + .Address {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1400px) {
+  .AddressContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .Address + .Address {
+    margin-top: 0;
+  }
+
+  .PhoneCard {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Footer */
+
+@media (min-width: 800px) {
+  .FooterPhoneCard,
+  .FooterAddressCard {
+    text-align: left;
+  }
+
+  .FooterPhoneCard .CardIcon::before,
+  .FooterAddressCard .CardIcon::before,
+  .FooterPhoneCard .CardIcon::after,
+  .FooterAddressCard .CardIcon::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+  }
+
+  .FooterAddressCard .AddressContainer {
+    display: block;
+  }
+}

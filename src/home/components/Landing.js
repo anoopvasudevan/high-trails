@@ -1,8 +1,8 @@
 import React from "react";
 
 import Container from "../../shared/components/Container";
-// import NavBar from "../../shared/components/Navigation/NavBar";
 import Button from "../../shared/components/UIElements/Button";
+import ScrollIndicator from "../../shared/components/UIElements/ScrollIndicator";
 import "./Landing.css";
 
 const Landing = () => {
@@ -19,19 +19,14 @@ const Landing = () => {
             </p>
             <p className="Hero__motto">Since 1979</p>
           </div>
+
           <Button to="/bikes" size="large" inverse special>
             Explore Bikes
           </Button>
-          {/* <div className="ReadButton">
-            <Button href="#" size="small" gray>
-              Read More
-            </Button>
-          </div> */}
-        <div className="ReadButton">
-          <Button href="#Services" size="small" gray>
-            Read More
-          </Button>
-        </div>
+
+          <div className="ScrollIndicatorBox">
+            <ScrollIndicator />
+          </div>
         </div>
       </Container>
     </section>

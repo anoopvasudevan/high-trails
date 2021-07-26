@@ -1,9 +1,9 @@
 .Landing {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../assets/images/landing.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .8)),
+    url("../../assets/images/landing5.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center 30%;
   background-attachment: fixed;
   display: grid;
   place-items: center;
@@ -11,12 +11,9 @@
 
 .Main {
   min-height: calc(100vh - var(--navbar-height));
-  /* min-height: 100vh; */
-  /* padding-top: var(--navbar-height); */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   padding: 10%;
@@ -24,8 +21,8 @@
 
 .Hero {
   color: var(--clr-light);
-  text-align: center;
-  /* margin-left: 10%; */
+  /* text-align: center; */
+  text-align: left;
   margin-bottom: 5rem;
 }
 
@@ -34,7 +31,6 @@
   font-family: var(--ff-secondary);
   text-transform: uppercase;
   line-height: 1.2em;
-  /* text-shadow: 1px 1px 1px  var(--clr-accent);; */
 }
 
 .Hero__title {
@@ -52,12 +48,105 @@
 .Hero__motto {
     margin: 0;
     line-height: 1.6em;
+    font-weight: var(--fw-reg);
+    color: var(--clr-dark);
 }
 
 
-.ReadButton {
- /* margin-top: 10rem; */
- position: absolute;
- bottom: 3rem;
-  
+.ScrollIndicatorBox {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
 }
+
+@media (max-width: 450px) {
+  .Hero__title {
+    /* font-size: min(7vh, 3.2rem); */
+    /* font-size: 7vh; */
+    font-size: 12vw;
+   }
+
+   .Hero__subtitle {
+     font-size: 9vw;
+   }
+
+   .Hero__motto {
+     font-size: min(4.5vw, 16px);
+   }
+}
+
+
+
+/* backup */
+/* 
+.Landing {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/landing2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  place-items: center;
+}
+
+.Main {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10%;
+}
+
+.Hero {
+  color: var(--clr-light);
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.Hero__title,
+.Hero__subtitle {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+
+.Hero__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-reg);
+  letter-spacing: 0.1em;
+}
+
+.Hero__subtitle {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-light);
+  margin-bottom: 2rem;
+}
+
+.Hero__motto {
+    margin: 0;
+    line-height: 1.6em;
+    font-weight: var(--fw-reg);
+}
+
+
+.ScrollIndicatorBox {
+  position: absolute;
+  bottom: 1%;
+}
+
+@media (max-width: 450px) {
+  .Hero__title {
+    font-size: 12vw;
+   }
+
+   .Hero__subtitle {
+     font-size: 9vw;
+   }
+
+   .Hero__motto {
+     font-size: min(4.5vw, 16px);
+   }
+} */

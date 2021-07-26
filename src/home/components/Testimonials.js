@@ -42,6 +42,7 @@ const Testimonials = () => {
 
         <Carousal
           slides={allTests}
+          style={{height: "500px"}}
           wrapper={useStyledTestimonial}
           btnLeft={<i className="fas fa-angle-double-left"></i>}
           btnRight={<i className="fas fa-angle-double-right"></i>}

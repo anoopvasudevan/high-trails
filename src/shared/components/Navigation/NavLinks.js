@@ -5,51 +5,51 @@ import "./NavLinks.css";
 
 const NavLinks = (props) => {
   return (
-    <ul className="NavLinks">
-      <li className="NavLink">
+    <ul className={`NavLinks ${props.footer && "FooterNavLinks"}`}>
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
         <NavLink to="/bikes" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Bikes
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/accessories">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/accessories" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Accessories
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/parts">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/parts" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Parts
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/service">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/service" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Service
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/events">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/events" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Events
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/about">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/about" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             About
           </span>
         </NavLink>
       </li>
-      <li className="NavLink" onClick={props.onClick}>
-        <NavLink to="/contact">
+      <li className={`NavLink ${props.footer && "FooterNavLink"}`}>
+        <NavLink to="/contact" onClick={props.onClick}>
           <span className="NavLink__content" tabIndex="-1">
             Contact
           </span>

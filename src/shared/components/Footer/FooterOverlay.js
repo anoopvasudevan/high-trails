@@ -5,8 +5,8 @@ const FooterOverlay = () => {
     <div
       style={{
         width: "100%",
-        height: "560px",
-        // zIndex: "-1",
+        height: "580px",
+        zIndex: "-1",
         position: "relative",
       }}
     ></div>

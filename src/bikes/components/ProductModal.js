@@ -2,20 +2,16 @@ import React from "react";
 
 import Modal from "../../shared/components/UIElements/Modal";
 import Button from "../../shared/components/UIElements/Button";
+import Carousal from "../../shared/components/UIElements/Carousal";
 import classes from "./ProductModal.module.css";
-
-const images = [
-  "https://images.unsplash.com/photo-1588879169484-8fe78d21080a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80",
-  "https://images.unsplash.com/photo-1589118949245-7d38baf380d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
-  "https://images.unsplash.com/photo-1570169043013-de63774bbf97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-  "https://images.unsplash.com/photo-1567448400815-59d0a6cdb52d?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80",
-  "https://images.unsplash.com/photo-1561642445-b789b9a7e6f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1070&q=80",
-  "https://images.unsplash.com/photo-1574965234283-2f20a4cffa43?ixlib=rb-1.2.1&auto=format&fit=crop&w=669&q=80",
-];
 
 const ProductModalOverlay = (props) => {
   const modalPositionTop = window.scrollY + 0.05 * window.innerHeight;
   const { product } = props;
+
+  const imageSlides = product.images.map((image, index) => (
+    <img key={index} src={image} alt="Product" />
+  ));
   // console.log("ProductModalOverlay rendering");
   const content = (
     <div
@@ -26,7 +22,15 @@ const ProductModalOverlay = (props) => {
       <div className={classes.ProductDisplay}>
         <div className={classes.ProductAbout}>
           <div className={classes.ProductImage}>
-            <img src={product.image} alt={product.name} />
+            {/* <img src={product.image} alt={product.name} /> */}
+            <Carousal
+              slides={imageSlides}
+              // wrapper={useStyledTestimonial}
+              slidesPerPage={1}
+              btnLeft={<i className="fas fa-angle-double-left"></i>}
+              btnRight={<i className="fas fa-angle-double-right"></i>}
+              style={{height: "min(50vh, 50vw)" }}
+            />
           </div>
           <h3 className={classes.ProductTitle}>{product.name}</h3>
           <p className={classes.ProductDesc}>{product.description}</p>
@@ -68,10 +72,12 @@ const ProductModalOverlay = (props) => {
 
 const ProductModal = (props) => {
   // console.log("ProductModal - rendering");
+  let productModalOverlay = <></>;
+  if(props.show) productModalOverlay = <ProductModalOverlay {...props} />;
   return (
     <>
       <Modal show={props.show} onCancel={props.onCancel}>
-        <ProductModalOverlay {...props} />
+        {productModalOverlay}
       </Modal>
     </>
   );

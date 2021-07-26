@@ -1,0 +1,54 @@
+
+.CommentsForm {
+  width: min(500px, 90%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  /* align-items: center; */
+}
+
+.FormItem {
+  margin-bottom: 2rem;
+}
+
+.FormItem * {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.FormItem label {
+  margin-bottom: 0.4em;
+  color: var(--clr-dark);
+}
+
+.FormItem input,
+.FormItem textarea {
+  font: inherit;
+  color: var(--clr-light);
+  padding: .6em 0.8em;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--clr-accent-light);
+  background-color: #c4c4c40d;
+  outline: none;
+  resize: none;
+  
+}
+
+.FormItem input:focus,
+.FormItem textarea:focus {
+  border: none;
+}
+/* 
+.FormItem input:-webkit-autofill,
+.FormItem input:-webkit-autofill:hover, 
+.FormItem input:-webkit-autofill:focus, 
+.FormItem input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0px 1000px #c4c4c40d inset;
+} */
+
+.CommentsForm button {
+  align-self: center;
+}

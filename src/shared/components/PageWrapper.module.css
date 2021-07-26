@@ -1,0 +1,17 @@
+.PageWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.PageWrapper__section {
+  color: var(--clr-light);
+  padding: calc(var(--navbar-height) + 4rem) 0;
+  text-align: center;
+  background-color: var(--clr-body);
+  min-height: 100vh;
+  position: relative;
+  z-index: 50;
+}
